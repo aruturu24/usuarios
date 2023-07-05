@@ -14,7 +14,7 @@ function autenticarUsuario($username, $password) {
     
     $resultado = $conn -> query($sql);
     if ($resultado -> num_rows > 0) {
-        header("Location: todosUsuarios.html");
+        header("Location: todosUsuarios.php");
     }else {
         echo "Usuário ou senha incorretos.";
     }

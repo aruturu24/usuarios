@@ -1,3 +1,10 @@
+<?php
+
+    include_once "getUsuarios.php";
+
+    $usuarios = getUsuarios();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -20,15 +27,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($usuarios as $usuario): ?>
                     <tr>
-                        <td>1</td>
-                        <td>arthur.gabryel</td>
-                        <td></td>
+                        <td> <?php echo $usuario["id"] ?> </td>
+                        <td> <?php echo $usuario["usuario"] ?> </td>
+                        <td> <?php echo $usuario["email"] ?> </td>
                         <td>
                             <button>Editar</button>
                             <button>Excluir</button>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
