@@ -33,8 +33,18 @@
                         <td> <?php echo $usuario["usuario"] ?> </td>
                         <td> <?php echo $usuario["email"] ?> </td>
                         <td>
-                            <button>Editar</button>
-                            <button>Excluir</button>
+                            <a 
+                                class="btn btn-primary"
+                                href="editarUsuario.php?id=<?php echo $usuario['id'] ?>"
+                            >
+                                Editar
+                            </a>
+                            <a 
+                                class="btn btn-danger"
+                                href="excluirUsuario.php?id=<?php echo $usuario['id'] ?>"
+                            >
+                                Excluir
+                            </a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
